@@ -12,20 +12,104 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.MyImage{
+  height: 100%;
+  background-image: url(https://uploads-ssl.webflow.com/5b32655…/5b33609…_lm.jpg);
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.More{
+  margin-top: 2rem;
+  border-bottom-style: solid;
+  border-bottom-color: blue;
+}
+.More:hover{  
+  background-color:#252e70;
+  left: 0.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.Menu {
+  background-color: black;
+  min-height: 200vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.Header{
+  position: relative;
+  top:75px;
+  display: flex;
+  overflow: hidden;
+  height: 700px;
+  justify-content: space-between;
+}
+.Header-text{
+  padding-left: 9rem;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.Header-text-top{
+  position: relative;
+  z-index: 10;
+  display: block;
+  color: hsla(0, 0%, 100%, 0.95);
+  font-size: 2em;
+  font-weight: 700;
+}
+.Header-text-top-behind{
+
+}
+.Header-text-name{
+  font-family: 'Cabin', sans-serif;
+  position: relative;
+  z-index: 100;
+  padding-top: 29px;
+  padding-bottom: 29px;
+  font-size: 6.5em;
+  line-height: auto;
+  
+}
+.Header-text-desc{
+  font-family: 'Cabin', sans-serif;
+  position: relative;
+  z-index: 100;
+  padding-right: 0px;
+  color: #999;
+  font-size: 1.3em;
+  line-height: 24px;
+  font-weight: 300;
+  text-align: justify;
+
+}
+.Dot{
+  margin-top: 3rem;
+  padding: 0px;
+  height: 20px;
+  width: 20px;
+  background-color: #5f99ff;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 @keyframes App-logo-spin {
