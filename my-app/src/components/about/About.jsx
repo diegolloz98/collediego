@@ -6,10 +6,30 @@ import {FiUsers} from 'react-icons/fi'
 import {VscFolderLibrary} from 'react-icons/vsc'
 
 const About = () => {
+
+  function getCurrentURL () {
+    var n = window.location.href.lastIndexOf('/');
+    var lastUrl = window.location.href.substring(n + 1);
+    console.log(lastUrl);
+    return lastUrl
+  }
+  const url = getCurrentURL();
+  var isEnglish = url === '';
+
   return (
     <section id='about'>
-      <h5>Get To Know</h5>
-      <h2>About Me</h2>
+      {isEnglish &&
+        <>
+          <h5>Get To Know</h5>
+          <h2>About Me</h2>
+        </>
+      }
+      {!isEnglish &&
+        <>
+          <h5>Conoceme</h5>
+          <h2>A cerca de mi</h2>
+        </>
+      }
 
       <div className='container about__container'>
         <div className='about__me'>
@@ -21,22 +41,72 @@ const About = () => {
           <div className='about__cards'>
             <article className='about__card'>
               <FaAward className='about__icon'/>
-              <h5>Experience</h5>
-              <small>7 Months Working</small>
+              {isEnglish &&
+                <>
+                  <h5>Experience</h5>
+                  <small>7 Months Working</small>
+                </>
+              }
+              {!isEnglish &&
+                <>
+                  <h5>Experiencia</h5>
+                  <small>7 Meses trabajando</small>
+                </>
+              }
+              
             </article>
 
             <article className='about__card'>
               <VscFolderLibrary className='about__icon'/>
-              <h5>Projects</h5>
-              <small>5 completed</small>
+              {isEnglish &&
+                <>
+                  <h5>Projects</h5>
+                  <small>5 completed</small>
+                </>
+              }
+              {!isEnglish &&
+                <>
+                  <h5>Proyectos</h5>
+                  <small>5 completados</small>
+                </>
+              }
+              
             </article>
           </div>
-
-          <p>
-          I am a passionate software engineer, with tendency to Front-end line,  Knowledgeable in user interface, testing, and debugging processes. Proficient in some technologies like React, JavaScript and Java. Always open to learn new things. Adaptability to projects and team collaboration.
-          </p>
-
-          <a href="#experience" className='btn btn-primary'>My Experience</a>
+          {isEnglish &&
+                <>
+                  <p>
+                    I am a passionate software engineer, with tendency to Front-end line,  
+                    Knowledgeable in user interface, testing, and debugging processes. 
+                    Proficient in some technologies like React, JavaScript and Java. 
+                    Always open to learn new things. Adaptability to projects and team
+                    collaboration.
+                  </p>
+                </>
+          }
+          {!isEnglish &&
+                <>
+                 <p>
+                    Soy un ingeniero de software apasionado, con tendencia a Front-end,
+                    Conocedor de la interfaz de usuario, pruebas y procesos de depuración.
+                    Competente en algunas tecnologías como React, JavaScript y Java.
+                    Siempre abierto a aprender cosas nuevas. Adaptabilidad a proyectos y 
+                    colaboración en equipo.
+                  </p>
+                </>
+            }
+          
+          {isEnglish &&
+                <>
+                  <a href="#experience" className='btn btn-primary'>My Experience</a>
+                </>
+              }
+              {!isEnglish &&
+                <>
+                  <a href="#experience" className='btn btn-primary'>Mi experiencia</a>
+                </>
+              }
+          
         </div>
       </div>
 

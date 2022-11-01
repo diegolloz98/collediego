@@ -1,21 +1,17 @@
 import './App.css';
-import Header from './components/header/Header'
-import Nav from './components/nav/Nav'
-import About from './components/about/About'
-import Experience from './components/experience/Experience'
-import Portafolio from './components/portafolio/Portafolio'
-import Footer from './components/footer/Footer'
+import CompHome from './components/compHome/CompHome';
+import { BrowserRouter as Router, Route, Routes } 
+from 'react-router-dom'
+
 
 function App() {
   return (
-    <>
-      <Header /> 
-      <Nav />
-      <About />
-      <Experience />
-      <Portafolio />
-      <Footer />
-    </>
+    <Router>
+        <Routes>
+          <Route exact path="/" element={<CompHome/>}/>
+          <Route exact path="/es" element={<CompHome/>}/>
+        </Routes>
+    </Router>
   );
 }
 
